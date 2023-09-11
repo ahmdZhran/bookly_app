@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 void main() {
   runApp(const BooklyApp());
@@ -9,8 +10,8 @@ class BooklyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const BooklyApp(),
+    return GetMaterialApp(
+      home: SplashView(),
     );
   }
 }
