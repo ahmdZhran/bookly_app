@@ -10,6 +10,7 @@ class SplshViewBody extends StatefulWidget {
 
 class _SplshViewBodyState extends State<SplshViewBody> {
   late AnimationController animationController;
+  late Animation slidingAnimation;
   @override
   Widget build(BuildContext context) {
     return Column(
