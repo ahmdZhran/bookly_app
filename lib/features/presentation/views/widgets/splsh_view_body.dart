@@ -11,7 +11,7 @@ class SplshViewBody extends StatefulWidget {
 class _SplshViewBodyState extends State<SplshViewBody>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-  late Animation slidingAnimation;
+  late Animation<Offset> slidingAnimation;
   @override
   void initState() {
     animationController = AnimationController(
