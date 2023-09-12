@@ -30,17 +30,31 @@ class _SplshViewBodyState extends State<SplshViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(AssetsImages.logo),
-        AnimatedBuilder(
-          // To make the ui build this only to improve performance
-          animation: slidingAnimation,
-          builder: (context, _) {
-            return SlideTransition(
-              position: slidingAnimation,
-              child: Text('Read free book'),
-            );
-          },
-        ),
+        SlidingText(slidingAnimation: slidingAnimation),
       ],
+    );
+  }
+}
+
+class SlidingText extends StatelessWidget {
+  const SlidingText({
+    super.key,
+    required this.slidingAnimation,
+  });
+
+  final Animation<Offset> slidingAnimation;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      // To make the ui build this only to improve performance
+      animation: slidingAnimation,
+      builder: (context, _) {
+        return SlideTransition(
+          position: slidingAnimation,
+          child: Text('Read free book'),
+        );
+      },
     );
   }
 }
