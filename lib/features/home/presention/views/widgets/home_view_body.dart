@@ -3,7 +3,6 @@
 import 'package:bookly_app/core/utils/text_style_mode.dart';
 import 'package:bookly_app/features/home/presention/views/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/assets.dart';
 import 'best_siller_books_item.dart';
 import 'feature_custom_list.dart';
 
