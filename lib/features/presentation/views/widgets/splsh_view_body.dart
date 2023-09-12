@@ -16,13 +16,7 @@ class _SplshViewBodyState extends State<SplshViewBody>
   @override
   void initState() {
     super.initState();
-    animationController = AnimationController(
-      vsync: this,
-      duration: Duration(seconds: 1),
-    );
-    slidingAnimation = Tween<Offset>(begin: Offset(0, 8), end: Offset.zero)
-        .animate(animationController);
-    animationController.forward();
+    initSlidingAnimation();
   }
 
   @override
@@ -40,5 +34,16 @@ class _SplshViewBodyState extends State<SplshViewBody>
         SlidingText(slidingAnimation: slidingAnimation),
       ],
     );
+  }
+
+  void initSlidingAnimation() {
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    );
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 8), end: Offset.zero)
+            .animate(animationController);
+    animationController.forward();
   }
 }
