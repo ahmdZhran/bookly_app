@@ -53,7 +53,7 @@ class BestSillerBooksList extends StatelessWidget {
                       '19.99 E',
                       style: Styles.textStyle20
                           .copyWith(fontWeight: FontWeight.bold),
-                    )
+                    ),
                   ],
                 )
               ],
