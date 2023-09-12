@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/utils/assets.dart';
+import 'package:bookly_app/features/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/widgets.dart';
 
 class SplshViewBody extends StatefulWidget {
