@@ -14,12 +14,14 @@ class _SplshViewBodyState extends State<SplshViewBody>
   late Animation<Offset> slidingAnimation;
   @override
   void initState() {
+    super.initState();
     animationController = AnimationController(
       vsync: this,
-      duration: Duration(minutes: 1),
+      duration: Duration(seconds: 1),
     );
-    slidingAnimation = Tween<Offset>(begin: Offset(0, 2), end: Offset.zero)
+    slidingAnimation = Tween<Offset>(begin: Offset(0, 8), end: Offset.zero)
         .animate(animationController);
+    animationController.forward();
     slidingAnimation.addListener(() {
       setState(() {});
     });
