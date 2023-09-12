@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/widgets.dart';
 
 class SplshViewBody extends StatelessWidget {
@@ -5,6 +6,8 @@ class SplshViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return Column(
+      children: [Image.asset(AssetsImages.logo)],
+    );
   }
 }
