@@ -18,7 +18,11 @@ class _SplshViewBodyState extends State<SplshViewBody>
       vsync: this,
       duration: Duration(minutes: 1),
     );
-    slidingAnimation = Tween<Offset>(begin: Offset(0,2) , end: Offset.zero).animate(animationController);
+    slidingAnimation = Tween<Offset>(begin: Offset(0, 2), end: Offset.zero)
+        .animate(animationController);
+    slidingAnimation.addListener(() {
+      setState(() {});
+    });
   }
 
   @override
@@ -28,8 +32,9 @@ class _SplshViewBodyState extends State<SplshViewBody>
       children: [
         Image.asset(AssetsImages.logo),
         SlideTransition(
-          position: ,
-          child: Text('Read free book')),
+          position: slidingAnimation,
+          child: Text('Read free book'),
+        ),
       ],
     );
   }
