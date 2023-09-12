@@ -7,7 +7,7 @@ class SplshViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [Image.asset(AssetsImages.logo)],
+      children: [Image.asset(AssetsImages.logo2)],
     );
   }
 }
