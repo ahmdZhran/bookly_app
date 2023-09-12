@@ -18,7 +18,7 @@ class _SplshViewBodyState extends State<SplshViewBody>
       vsync: this,
       duration: Duration(minutes: 1),
     );
-    super.initState();
+    slidingAnimation = Tween<Offset>(begin: Offset(0,2) , end: Offset.zero).animate(animationController);
   }
 
   @override
@@ -27,7 +27,9 @@ class _SplshViewBodyState extends State<SplshViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(AssetsImages.logo),
-        Text('Read free book'),
+        SlideTransition(
+          position: ,
+          child: Text('Read free book')),
       ],
     );
   }
