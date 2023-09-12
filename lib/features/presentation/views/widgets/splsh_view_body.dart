@@ -33,9 +33,15 @@ class _SplshViewBodyState extends State<SplshViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(AssetsImages.logo),
-        SlideTransition(
-          position: slidingAnimation,
-          child: Text('Read free book'),
+        AnimatedBuilder(
+          // To make the ui build this only to improve performance
+          animation: slidingAnimation,
+          builder: (context, _) {
+            return SlideTransition(
+              position: slidingAnimation,
+              child: Text('Read free book'),
+            );
+          },
         ),
       ],
     );
