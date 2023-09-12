@@ -14,6 +14,10 @@ class _SplshViewBodyState extends State<SplshViewBody>
   late Animation slidingAnimation;
   @override
   void initState() {
+    animationController = AnimationController(
+      vsync: this,
+      duration: Duration(minutes: 1),
+    );
     super.initState();
   }
 
