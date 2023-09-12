@@ -9,7 +9,7 @@ class SplshViewBody extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(AssetsImages.logo3),
+        Image.asset(AssetsImages.logo),
         Text('Read free book'),
       ],
     );
