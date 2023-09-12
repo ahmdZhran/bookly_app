@@ -20,11 +20,7 @@ class _SplshViewBodyState extends State<SplshViewBody>
   void initState() {
     super.initState();
     initSlidingAnimation();
-    Future.delayed(const Duration(seconds: 3), () {
-      Get.to(() => const HomeView(),
-          transition: Transition.fade,
-          duration: const Duration(milliseconds: 250));
-    });
+    navigateToHomeView();
   }
 
   @override
@@ -53,5 +49,13 @@ class _SplshViewBodyState extends State<SplshViewBody>
         Tween<Offset>(begin: const Offset(0, 8), end: Offset.zero)
             .animate(animationController);
     animationController.forward();
+  }
+
+  void navigateToHomeView() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.to(() => const HomeView(),
+          transition: Transition.fade,
+          duration: const Duration(milliseconds: 250));
+    });
   }
 }
