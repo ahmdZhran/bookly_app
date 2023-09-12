@@ -22,9 +22,6 @@ class _SplshViewBodyState extends State<SplshViewBody>
     slidingAnimation = Tween<Offset>(begin: Offset(0, 8), end: Offset.zero)
         .animate(animationController);
     animationController.forward();
-    slidingAnimation.addListener(() {
-      setState(() {});
-    });
   }
 
   @override
