@@ -1,6 +1,9 @@
 import 'package:bookly_app/core/utils/assets.dart';
+import 'package:bookly_app/features/home/presention/view/home.dart';
 import 'package:bookly_app/features/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 class SplshViewBody extends StatefulWidget {
   const SplshViewBody({super.key});
@@ -17,6 +20,11 @@ class _SplshViewBodyState extends State<SplshViewBody>
   void initState() {
     super.initState();
     initSlidingAnimation();
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.to(() => const HomeView(),
+          transition: Transition.fade,
+          duration: const Duration(milliseconds: 250));
+    });
   }
 
   @override
