@@ -13,6 +13,11 @@ class _SplshViewBodyState extends State<SplshViewBody>
   late AnimationController animationController;
   late Animation slidingAnimation;
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
