@@ -1,9 +1,9 @@
+import 'package:bookly_app/core/utils/app_rout.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/features/home/presention/views/home_views.dart';
 import 'package:bookly_app/features/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:go_router/go_router.dart';
 
 class SplshViewBody extends StatefulWidget {
   const SplshViewBody({super.key});
@@ -53,9 +53,11 @@ class _SplshViewBodyState extends State<SplshViewBody>
 
   void navigateToHomeView() {
     Future.delayed(const Duration(seconds: 3), () {
-      Get.to(() => const HomeView(),
-          transition: Transition.fade,
-          duration: const Duration(milliseconds: 250));
+      // Get.to(() => const HomeView(),
+      //     transition: Transition.fade,
+      //     duration: const Duration(milliseconds: 250));
+
+      GoRouter.of(context).push(AppRouter.kHomeView);
     });
   }
 }
