@@ -7,13 +7,15 @@ class BookDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Padding(
-        padding: EdgeInsets.all(30),
-        child: Column(
-          children: [
-            CustomBookDetailsAppBar(),
-          ],
+    return Scaffold(
+      body: const SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(30),
+          child: Column(
+            children: [
+              CustomBookDetailsAppBar(),
+            ],
+          ),
         ),
       ),
     );
