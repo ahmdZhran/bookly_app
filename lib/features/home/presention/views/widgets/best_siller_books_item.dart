@@ -4,8 +4,8 @@ import 'package:flutter/widgets.dart';
 import '../../../../../core/utils/assets.dart';
 import 'book_rating_widget.dart';
 
-class BestSillerBooksList extends StatelessWidget {
-  const BestSillerBooksList({super.key});
+class BestSillerBooksItem extends StatelessWidget {
+  const BestSillerBooksItem({super.key});
 
   @override
   Widget build(BuildContext context) {

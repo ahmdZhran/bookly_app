@@ -28,9 +28,24 @@ class HomeViewBody extends StatelessWidget {
               style: Styles.textStyle18,
             ),
           ),
-          BestSillerBooksList(),
+          BestSillerBookList()
         ],
       ),
+    );
+  }
+}
+
+class BestSillerBookList extends StatelessWidget {
+  const BestSillerBookList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: 10,
+      scrollDirection: Axis.vertical,
+      itemBuilder: (context, index) {
+        return BestSillerBooksItem();
+      },
     );
   }
 }
