@@ -31,39 +31,41 @@ class BestSillerBooksItem extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * .5,
-                    child: const Text(
-                      'Harry Poter the globlet of fire',
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: Styles.textStyle18,
+              child: Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * .5,
+                      child: const Text(
+                        'Harry Poter the globlet of fire',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: Styles.textStyle18,
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 3,
-                  ),
-                  const Text(
-                    'J.K Rowling',
-                    style: Styles.textStyle14,
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        '19.99 E',
-                        style: Styles.textStyle20
-                            .copyWith(fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        width: 70,
-                      ),
-                      const BookRating()
-                    ],
-                  )
-                ],
+                    const SizedBox(
+                      height: 3,
+                    ),
+                    const Text(
+                      'J.K Rowling',
+                      style: Styles.textStyle14,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          '19.99 E',
+                          style: Styles.textStyle20
+                              .copyWith(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          width: 70,
+                        ),
+                        const BookRating()
+                      ],
+                    )
+                  ],
+                ),
               ),
             )
           ],
@@ -72,3 +74,71 @@ class BestSillerBooksItem extends StatelessWidget {
     );
   }
 }
+// import 'package:bookly_app/core/utils/assets.dart';
+// import 'package:flutter/material.dart';
+
+// import '../../../../../core/utils/text_style_mode.dart';
+// import 'book_rating_widget.dart';
+
+// class BestSillerBooksItem extends StatelessWidget {
+//   const BestSillerBooksItem({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Row(
+//       children: [
+//         Container(
+//           height: 170,
+//           width: 140,
+//           decoration: BoxDecoration(
+//             borderRadius: BorderRadius.circular(12),
+//             image: DecorationImage(
+//               fit: BoxFit.cover,
+//               image: AssetImage(AssetsImages.testImage),
+//             ),
+//           ),
+//         ),
+//         Padding(
+//           padding: const EdgeInsets.only(left: 10.0),
+//           child: Column(
+//             crossAxisAlignment: CrossAxisAlignment.start,
+//             children: [
+//               SizedBox(
+//                 width: MediaQuery.of(context).size.width * .5,
+//                 child: const Text(
+//                   'Harry Poter the globlet of fire',
+//                   maxLines: 2,
+//                   overflow: TextOverflow.ellipsis,
+//                   style: Styles.textStyle18,
+//                 ),
+//               ),
+//               const SizedBox(
+//                 height: 2,
+//               ),
+//               const Text(
+//                 'J.K Rowling',
+//                 style: Styles.textStyle14,
+//               ),
+//               SizedBox(
+//                 height: 10,
+//               ),
+//               Row(
+//                 children: [
+//                   Text(
+//                     '19.99 E',
+//                     style: Styles.textStyle20
+//                         .copyWith(fontWeight: FontWeight.bold),
+//                   ),
+//                   const SizedBox(
+//                     width: 60,
+//                   ),
+//                   BookRating(),
+//                 ],
+//               )
+//             ],
+//           ),
+//         )
+//       ],
+//     );
+//   }
+// }

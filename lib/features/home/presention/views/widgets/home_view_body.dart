@@ -1,9 +1,8 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:bookly_app/core/utils/text_style_mode.dart';
 import 'package:bookly_app/features/home/presention/views/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'best_siller_books_item.dart';
+import 'best_siller_list_view.dart';
 import 'feature_custom_list.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -11,9 +10,9 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: const Column(
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomAppBar(),
@@ -31,21 +30,6 @@ class HomeViewBody extends StatelessWidget {
           BestSillerBookList()
         ],
       ),
-    );
-  }
-}
-
-class BestSillerBookList extends StatelessWidget {
-  const BestSillerBookList({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 10,
-      scrollDirection: Axis.vertical,
-      itemBuilder: (context, index) {
-        return BestSillerBooksItem();
-      },
     );
   }
 }
