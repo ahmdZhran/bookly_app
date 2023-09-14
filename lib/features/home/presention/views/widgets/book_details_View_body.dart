@@ -8,13 +8,19 @@ class BookDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: const SafeArea(
+      body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(30),
           child: Column(
-            children: [CustomBookDetailsAppBar(), CustomBookImage()],
+            children: [
+              CustomBookDetailsAppBar(),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * .2),
+                child: CustomBookImage(),
+              ),
+            ],
           ),
         ),
       ),
