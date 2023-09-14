@@ -50,11 +50,11 @@ class BookDetailsBody extends StatelessWidget {
               const BookRating(
                 mainAxisAlignment: MainAxisAlignment.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               const ActionButton(),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Align(
@@ -66,7 +66,7 @@ class BookDetailsBody extends StatelessWidget {
                   ),
                 ),
               ),
-              SimilarBooksListView(),
+              const SimilarBooksListView(),
             ],
           ),
         ),
