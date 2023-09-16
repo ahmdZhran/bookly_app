@@ -1,8 +1,7 @@
 import 'package:bookly_app/core/utils/text_style_mode.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-import '../../../../home/presention/views/widgets/best_siller_books_item.dart';
+import '../../../../home/presention/views/widgets/search_result_listView.dart';
 import '../../../../home/saerch_text_field.dart';
 
 class SearchViewBody extends StatelessWidget {
@@ -27,29 +26,12 @@ class SearchViewBody extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Expanded(child: SearchResultListView()),
+            Expanded(
+              child: SearchResultListView(),
+            ),
           ]),
         ),
       ),
-    );
-  }
-}
-
-class SearchResultListView extends StatelessWidget {
-  const SearchResultListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: EdgeInsets.zero,
-      itemCount: 10,
-      scrollDirection: Axis.vertical,
-      itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.symmetric(vertical: 10),
-          child: BookListViewItem(),
-        );
-      },
     );
   }
 }
