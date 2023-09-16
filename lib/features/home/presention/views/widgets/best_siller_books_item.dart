@@ -6,8 +6,8 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/assets.dart';
 import 'book_rating_widget.dart';
 
-class BestSillerBooksItem extends StatelessWidget {
-  const BestSillerBooksItem({super.key});
+class BookListViewItem extends StatelessWidget {
+  const BookListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class BestSillerBooksItem extends StatelessWidget {
                                 .copyWith(fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(
-                            width: 70,
+                            width: 50,
                           ),
                           const BookRating()
                         ],
