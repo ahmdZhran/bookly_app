@@ -19,8 +19,9 @@ class HomeRepoImpl implements HomeRepo {
         books.add(BookModel.fromJson(item));
       }
       return right(books);
-    } catch (e) {}
-    return left(ServerFailure());
+    } catch (e) {
+      return left(ServerFailure());
+    }
   }
 
   @override
