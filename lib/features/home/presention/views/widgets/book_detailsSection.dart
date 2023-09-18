@@ -15,7 +15,10 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(
+            imagUrl:
+                'https://cdn1.iconfinder.com/data/icons/fs-icons-ubuntu-by-franksouza-/512/google-chrome.png',
+          ),
         ),
         const SizedBox(
           height: 43,

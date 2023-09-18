@@ -14,7 +14,10 @@ class SimilarBooksListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            child: CustomBookImage(),
+            child: CustomBookImage(
+              imagUrl:
+                  'https://cdn1.iconfinder.com/data/icons/fs-icons-ubuntu-by-franksouza-/512/google-chrome.png',
+            ),
           );
         },
       ),
