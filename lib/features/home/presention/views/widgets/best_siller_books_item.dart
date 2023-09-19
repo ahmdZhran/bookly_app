@@ -4,8 +4,6 @@ import 'package:bookly_app/features/home/data/models/book_model/book_model.dart'
 import 'package:bookly_app/features/home/presention/views/widgets/custom_book_image.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../../../core/utils/assets.dart';
 import 'book_rating_widget.dart';
 
 class BookListViewItem extends StatelessWidget {
