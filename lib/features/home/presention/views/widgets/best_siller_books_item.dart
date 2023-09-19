@@ -25,20 +25,6 @@ class BookListViewItem extends StatelessWidget {
             children: [
               CustomBookImage(
                   imagUrl: bookModel.volumeInfo!.imageLinks?.thumbnail ?? ''),
-              // AspectRatio(
-              //   aspectRatio: 0.9 / 1,
-              //   child: Container(
-              //     decoration: BoxDecoration(
-              //       borderRadius: BorderRadius.circular(20),
-              //       image: const DecorationImage(
-              //         fit: BoxFit.fill,
-              //         image: AssetImage(
-              //           AssetsImages.testImage,
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
               Padding(
                 padding: const EdgeInsets.only(left: 10.0),
                 child: Expanded(
